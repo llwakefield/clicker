@@ -9,12 +9,10 @@ function Clicker() {
     setValHistory((prevVal) => [...prevVal, clickVal]);
   }, [clickVal]);
 
-  const incClickHandler = (e) => {
-    e.preventDefault();
+  const incClickHandler = () => {
     setClickVal(clickVal + 1);
   };
-  const decClickHandler = (e) => {
-    e.preventDefault();
+  const decClickHandler = () => {
     if (clickVal > 0) {
       setClickVal(clickVal - 1);
     }
